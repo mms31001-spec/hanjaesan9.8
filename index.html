@@ -31,6 +31,8 @@
   #home.show{display:flex;align-items:center;min-height:calc(100vh - 96px - 110px);padding:0}
   .name{font-family:"Noto Serif KR",serif;font-weight:300;font-size:clamp(44px,8vw,72px);letter-spacing:-.04em;line-height:1.1}
   .role{color:var(--muted);font-size:16px;letter-spacing:.04em;margin-top:18px}
+  #about .name{font-size:clamp(30.8px,5.6vw,50.4px)}
+  #about .role{font-size:20.8px}
 
   .list > a,.list > div{display:flex;justify-content:space-between;align-items:center;gap:24px;padding:20px 0;border-top:1px solid var(--line)}
   .list > a:last-child,.list > div:last-child{border-bottom:1px solid var(--line)}
@@ -48,7 +50,6 @@
   .pubs .yr{color:var(--muted)}
   .pubs p{line-height:1.7;word-break:keep-all}
   .pubs i{color:var(--muted)}
-  .interests{font-size:17px}
   .mail{font-size:17px;border-bottom:1px solid var(--muted);padding-bottom:2px;transition:border-color .2s}
   .mail:hover{border-color:var(--text)}
 
@@ -83,8 +84,8 @@
   </section>
 
   <section id="about">
-    <h1>물리교사 한재상</h1>
-    <p class="lead">Physics Teacher Han Jae Sang</p>
+    <div class="name">Han Jae Sang</div>
+    <div class="role">Physics Teacher</div>
 
     <div class="block" style="margin-top:80px">
       <h2>이력</h2>
@@ -110,11 +111,6 @@
         <li><span class="yr">2025</span><p>Han, J. S., &amp; Kim, H. J. (2025). Enhancing the Performance of Automated Scoring Model for Kinematic Graph Answers Using Synthetic Graph Images. <i>Journal of Science Education and Technology, 34</i>(4), 664–680.</p></li>
         <li><span class="yr">2023</span><p>한재상, &amp; 김현주. (2023). 합성곱 신경망 기반 채점 모델 설계 및 적용을 통한 운동학 그래프 답안 자동 채점. <i>한국과학교육학회지 = Journal of the Korean Association for Science Education, 43</i>(3), 237–251.</p></li>
       </ul>
-    </div>
-
-    <div class="block">
-      <h2>관심 분야</h2>
-      <p class="interests">물리교육 · 에듀테크 · 인공지능</p>
     </div>
 
     <div class="block">
