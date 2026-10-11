@@ -67,87 +67,28 @@
 
 <header><div class="wrap">
   <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#edutech">Edutech</a>
-    <a href="#research">Research</a>
+    <a href="./" class="active">Home</a>
+    <a href="about/">About</a>
+    <a href="edutech/">Edutech</a>
+    <a href="research/">Research</a>
   </nav>
 </div></header>
 
 <main class="wrap">
 
-  <section id="home">
+  <section id="home" class="show">
     <div class="card">
       <div class="name">Han Jae Sang</div>
       <div class="role">Physics Teacher</div>
     </div>
   </section>
 
-  <section id="about">
-    <div class="name">Han Jae Sang</div>
-    <div class="role">Physics Teacher</div>
-
-    <div class="block" style="margin-top:80px">
-      <h2>경력</h2>
-      <dl class="info">
-        <div><dt>2026. 3. – 현재</dt><dd>경상남도교육청 과학교육원 파견 근무</dd></div>
-        <div><dt>2024. 3. – 2026. 2.</dt><dd>창원용호고등학교 근무</dd></div>
-        <div><dt>2022. 3. – 2024. 2.</dt><dd>한국교원대학교 석사 파견</dd></div>
-        <div><dt>2017. 3. – 2022. 2.</dt><dd>의령고등학교 근무</dd></div>
-      </dl>
-    </div>
-
-    <div class="block">
-      <h2>학력</h2>
-      <dl class="info">
-        <div><dt>2024. 2.</dt><dd>한국교원대학교 과학교육과 물리교육전공 졸업 (석사)</dd></div>
-        <div><dt>2016. 2.</dt><dd>경상대학교 물리교육과 졸업 (학사)</dd></div>
-      </dl>
-    </div>
-
-    <div class="block">
-      <h2>학술 논문</h2>
-      <ul class="pubs">
-        <li><span class="yr">2025</span><p>Han, J. S., &amp; Kim, H. J. (2025). Enhancing the Performance of Automated Scoring Model for Kinematic Graph Answers Using Synthetic Graph Images. <i>Journal of Science Education and Technology, 34</i>(4), 664–680.</p></li>
-        <li><span class="yr">2023</span><p>한재상, &amp; 김현주. (2023). 합성곱 신경망 기반 채점 모델 설계 및 적용을 통한 운동학 그래프 답안 자동 채점. <i>한국과학교육학회지 = Journal of the Korean Association for Science Education, 43</i>(3), 237–251.</p></li>
-      </ul>
-    </div>
-
-    <div class="block">
-      <h2>이메일</h2>
-      <a class="mail" href="mailto:hjs31001@korea.kr">hjs31001@korea.kr</a>
-    </div>
-  </section>
-
-  <section id="edutech">
-    <h2>Edutech</h2>
-    <div class="list">
-      <a href="https://mms31001-spec.github.io/hjs_lab/" target="_blank" rel="noopener"><div><span class="t">세상의 모든 물리학 실험</span><p>2026</p></div><span class="m">↗</span></a>
-      <a href="https://mms31001-spec.github.io/han_jae_sang_001/" target="_blank" rel="noopener"><div><span class="t">물리학으로 폭탄 피하기 (PC용)</span><p>2026</p></div><span class="m">↗</span></a>
-      <a href="https://mms31001-spec.github.io/han_jae_sang_001/install.html" target="_blank" rel="noopener"><div><span class="t">물리학으로 폭탄 피하기 (모바일용)</span><p>2026</p></div><span class="m">↗</span></a>
-    </div>
-  </section>
-
-  <section id="research">
-    <h2>Research</h2>
-    <div class="list">
-      <a href="https://link.springer.com/article/10.1007/s10956-024-10186-w" target="_blank" rel="noopener"><div><span class="t">Enhancing the Performance of Automated Scoring Model for Kinematic Graph Answers Using Synthetic Graph Images</span><p>Journal of Science Education and Technology · 2025</p></div><span class="m">↗</span></a>
-      <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002971961" target="_blank" rel="noopener"><div><span class="t">합성곱 신경망 기반 채점 모델 설계 및 적용을 통한 운동학 그래프 답안 자동 채점</span><p>한국과학교육학회지 · 2023</p></div><span class="m">↗</span></a>
-    </div>
-  </section>
-
 </main>
 
-
 <script>
-  const secs = document.querySelectorAll('section'), links = document.querySelectorAll('nav a');
-  function route(){
-    const id = (location.hash || '#home').slice(1), t = document.getElementById(id) ? id : 'home';
-    secs.forEach(s => s.classList.toggle('show', s.id === t));
-    links.forEach(a => a.classList.toggle('active', a.hash === '#' + t));
-    scrollTo(0, 0);
-  }
-  addEventListener('hashchange', route); route();
+  // 예전 주소(#about 등)로 들어오면 새 주소로 이동
+  var h = location.hash.slice(1);
+  if (['about','edutech','research'].indexOf(h) > -1) location.replace(h + '/');
 </script>
 </body>
 </html>
