@@ -48,8 +48,9 @@
   .pubs li{display:grid;grid-template-columns:180px 1fr;padding:18px 0;border-top:1px solid var(--line);font-size:16px}
   .pubs li:last-child{border-bottom:1px solid var(--line)}
   .pubs .yr{color:var(--muted)}
+  .pubs .yr small{display:block;font-size:16px;color:var(--muted);letter-spacing:.02em}
   .pubs p{line-height:1.7;word-break:keep-all}
-  .pubs i{color:var(--muted)}
+  .pubs i,.pubs .src{color:var(--muted)}
   .mail{font-size:17px;border-bottom:1px solid var(--muted);padding-bottom:2px;transition:border-color .2s}
   .mail:hover{border-color:var(--text)}
 
@@ -101,8 +102,15 @@
     <div class="block">
       <h2>학술 논문</h2>
       <ul class="pubs">
-        <li><span class="yr">2025</span><p>Han, J. S., &amp; Kim, H. J. (2025). Enhancing the Performance of Automated Scoring Model for Kinematic Graph Answers Using Synthetic Graph Images. <i>Journal of Science Education and Technology, 34</i>(4), 664–680.</p></li>
-        <li><span class="yr">2023</span><p>한재상, &amp; 김현주. (2023). 합성곱 신경망 기반 채점 모델 설계 및 적용을 통한 운동학 그래프 답안 자동 채점. <i>한국과학교육학회지 = Journal of the Korean Association for Science Education, 43</i>(3), 237–251.</p></li>
+        <li><span class="yr">2025<small>SCIE/SSCI</small></span><p>Han, J. S., &amp; Kim, H. J. (2025). Enhancing the Performance of Automated Scoring Model for Kinematic Graph Answers Using Synthetic Graph Images. <i>Journal of Science Education and Technology, 34</i>(4), 664–680.</p></li>
+        <li><span class="yr">2023<small>KCI</small></span><p>한재상, &amp; 김현주. (2023). 합성곱 신경망 기반 채점 모델 설계 및 적용을 통한 운동학 그래프 답안 자동 채점. <i>한국과학교육학회지 = Journal of the Korean Association for Science Education, 43</i>(3), 237–251.</p></li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h2>학위 논문</h2>
+      <ul class="pubs">
+        <li><span class="yr">2024</span><p>한재상. (2024). 머신러닝 기반 채점모델 설계 및 데이터 증강을 통한 운동학 그래프 답안의 자동채점 = Automated scoring of kinematic graph answers through machine learning-based scoring model design and data augmentation, <span class="src">한국교원대학교 석사학위 논문</span></p></li>
       </ul>
     </div>
 
@@ -116,4 +124,3 @@
 
 </body>
 </html>
-
